@@ -2,6 +2,8 @@
 >
 > Simple personal alternative of [bit.ly](https://bitly.com/) on different languages and frameworks.
 
+## [Documentation](docs)
+
 ## Road map
 
 ### Environment
