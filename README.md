@@ -13,7 +13,8 @@ and configured by [SaltStack](http://saltstack.com/) with [PostgreSQL](http://ww
 
 ### CLI
 
-Based on Symfony components and [Cilex](https://github.com/Cilex/Cilex) for data management through the console.
+Based on [Symfony components](http://symfony.com/components) and [Cilex](https://github.com/Cilex/Cilex) for data
+management through the console.
 
 ### API
 
