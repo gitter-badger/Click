@@ -13,8 +13,6 @@ phalcon:
       - php5-dev
       - php5-fpm
       - php5-mcrypt
-      - php5-openssl
-      - php5-pdo
       - php5-pgsql
       - php5-phalcon
       - gcc
