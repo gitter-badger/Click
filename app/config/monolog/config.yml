@@ -1,0 +1,6 @@
+monolog:
+  handlers:
+    file:
+      type: stream
+      path: "%root_dir%/app/logs/cli.log"
+      level: %log_level%

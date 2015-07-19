@@ -1,0 +1,12 @@
+doctrine:
+  dbal:
+    connections:
+      default:
+        driver: %database_driver%
+        host: %database_host%
+        port: %database_port%
+        path: %database_path%
+        memory: %database_in_memory%
+        dbname: %database_name%
+        user: %database_user%
+        password: %database_password%

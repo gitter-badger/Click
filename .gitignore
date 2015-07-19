@@ -1,0 +1,4 @@
+/app/config/parameters.yml
+/app/logs/*
+!app/logs/.gitkeep
+/vendor/

@@ -1,0 +1,10 @@
+parameters:
+  database_driver: pdo_pgsql
+  database_host: pgrw
+  database_port: 5432
+  database_path: ~
+  database_in_memory: ~
+  database_name: click
+  database_user: click_rw
+  database_password: click_rw_pass
+  log_level: info

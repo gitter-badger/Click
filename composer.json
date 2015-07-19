@@ -1,0 +1,38 @@
+{
+  "name": "octolab/click-cli",
+  "type": "project",
+  "description": "CLI for \"Click!\" library.",
+  "homepage": "https://github.com/octolab/click",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kamil Samigullin",
+      "email": "kamil@samigullin.info"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "doctrine/migrations": "~1.0|1.0.x-dev#67f0268",
+    "incenteev/composer-parameter-handler": "~2.0",
+    "kamilsk/cilex-service-providers": "~1.0",
+    "monolog/monolog": "~1.0",
+    "symfony/event-dispatcher": "~2.0",
+    "symfony/monolog-bridge": "~2.0"
+  },
+  "autoload": {
+    "psr-4": { "OctoLab\\Click\\": "src/" }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+    ],
+    "post-update-cmd": [
+      "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+    ]
+  },
+  "extra": {
+    "incenteev-parameters": [
+      { "file": "app/config/parameters.yml" }
+    ]
+  }
+}
