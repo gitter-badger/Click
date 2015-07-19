@@ -1,6 +1,6 @@
 > # Click!
 >
-> Simple personal alternative of [bit.ly](https://bitly.com/) on different languages and frameworks.
+> Simplest personal referrals tracker on different languages and frameworks.
 
 ## Road map
 
@@ -28,5 +28,3 @@ management through the console.
 | Java       | [Sprint Boot](https://github.com/spring-projects/spring-boot) | not ready   |
 | Java       | [Play](https://github.com/playframework/playframework)        | not ready   |
 | Ruby       | [Sinatra](https://github.com/sinatra/sinatra)                 | not ready   |
-
-### Stress testing
