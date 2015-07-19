@@ -23,3 +23,8 @@ postgres-app-db:
     - template: template0
     - require:
       - postgres_user: postgres-app-user
+
+postgres-host-rw:
+  host.present:
+    - name: dbrw
+    - ip: 127.0.0.1
