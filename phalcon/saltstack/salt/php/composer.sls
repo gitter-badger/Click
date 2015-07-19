@@ -3,8 +3,8 @@ composer-get:
     - name: 'CURL=`which curl`; $CURL -sS https://getcomposer.org/installer | php'
     - unless: test -f /usr/local/bin/composer
     - cwd: /tmp
-    - required:
-      - pgk: php
+    - require:
+      - pkg: php
 
 composer-global-install:
   cmd.wait:
