@@ -1,6 +1,6 @@
 parameters:
   database_driver: pdo_pgsql
-  database_host: pgrw
+  database_host: dbrw
   database_port: 5432
   database_path: ~
   database_in_memory: ~
