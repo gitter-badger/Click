@@ -2,6 +2,8 @@
 >
 > Simplest personal referrals tracker on different languages and frameworks.
 
+## [Documentation](docs)
+
 ## Road map
 
 ### Environment

@@ -1,7 +1,7 @@
 {
   "name": "octolab/click-cli",
-  "type": "project",
-  "description": "CLI for \"Click!\" library.",
+  "type": "tool",
+  "description": "CLI for \"Click!\" tool.",
   "homepage": "https://github.com/octolab/click",
   "license": "MIT",
   "authors": [
