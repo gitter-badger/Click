@@ -1,3 +1,6 @@
+include:
+  - php.composer
+
 php:
   pkg.installed:
     - pkgs:
