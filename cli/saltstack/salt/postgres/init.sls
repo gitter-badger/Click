@@ -20,3 +20,27 @@ postgres:
     - enable: true
     - require:
       - pkg: postgres
+
+postgres-config:
+  file.managed:
+    - name: /etc/postgresql/9.4/main/postgresql.conf
+    - source: salt://postgres/config/postgresql.conf
+    - user: postgres
+    - group: postgres
+    - mode: 644
+    - require:
+      - pkg: postgres
+    - watch_in:
+      - service: postgres
+
+postgres-hba:
+  file.managed:
+    - name: /etc/postgresql/9.4/main/pg_hba.conf
+    - source: salt://postgres/config/pg_hba.conf
+    - user: postgres
+    - group: postgres
+    - mode: 640
+    - require:
+      - pkg: postgres
+    - watch_in:
+      - service: postgres

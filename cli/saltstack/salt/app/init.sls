@@ -1,5 +1,8 @@
 {% set app = pillar['application'] %}
 
+include:
+  - app.postgres
+
 app:
   file.directory:
     - name: {{ app['root'] }}
