@@ -2,11 +2,11 @@
 >
 > Simplest personal referrals tracker on different languages and frameworks.
 
-## [Documentation](docs)
-
 ## Road map
 
-### [Environment](../../tree/environment)
+### Environment
+
+#### [Documentation](docs)
 
 Based on [Ubuntu](http://www.ubuntu.com/) 14.04 LTS built by [Vagrant](https://www.vagrantup.com/)
 and configured by [SaltStack](http://saltstack.com/) with [PostgreSQL](http://www.postgresql.org/) as main database.
