@@ -11,7 +11,7 @@ app:
     - mode: 0755
     - makedirs: true
     - require:
-      - user: web
+      - user: web-user
   git.latest:
     - name: {{ app['repo'] }}
     - rev: {{ app['rev'] }}

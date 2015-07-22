@@ -1,4 +1,4 @@
-web_user:
+web-user:
   user.present:
     - name: web
     - groups:
