@@ -28,5 +28,5 @@ management through the console.
 | Go         | [Martini](https://github.com/go-martini/martini)              | [go-martini](../../tree/go-martini)     | not ready   |
 | C          | [Kore](https://github.com/jorisvink/kore)                     | not presented                           | not ready   |
 | Java       | [Sprint Boot](https://github.com/spring-projects/spring-boot) | not presented                           | not ready   |
-| Java       | [Play](https://github.com/playframework/playframework)        | not presented                           | not ready   |
+| Scala      | [Play](https://github.com/playframework/playframework)        | not presented                           | not ready   |
 | Ruby       | [Sinatra](https://github.com/sinatra/sinatra)                 | not presented                           | not ready   |
