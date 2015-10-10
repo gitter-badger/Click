@@ -1,18 +1,15 @@
 {
   "name": "octolab/click-cli",
-  "type": "tool",
-  "description": "CLI for \"Click!\" tool.",
-  "homepage": "https://github.com/octolab/click",
+  "type": "application",
+  "description": "\"Click!\" command line tool.",
+  "homepage": "https://github.com/octolab/Click",
   "license": "MIT",
   "authors": [
-    {
-      "name": "Kamil Samigullin",
-      "email": "kamil@samigullin.info"
-    }
+    { "name": "Kamil Samigullin", "email": "kamil@samigullin.info" }
   ],
   "require": {
     "php": ">=5.5",
-    "doctrine/migrations": "~1.0|1.0.x-dev#67f0268",
+    "doctrine/migrations": "~1.0",
     "incenteev/composer-parameter-handler": "~2.0",
     "kamilsk/cilex-service-providers": "~1.0",
     "monolog/monolog": "~1.0",

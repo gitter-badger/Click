@@ -2,7 +2,7 @@
 
 namespace OctoLab\Click\Migrations;
 
-use OctoLab\Cilex\Doctrine\DriverBasedMigration;
+use OctoLab\Common\Doctrine\Migration\DriverBasedMigration;
 
 /**
  * @author Kamil Samigullin <kamil@samigullin.info>
