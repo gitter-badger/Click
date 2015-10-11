@@ -80,11 +80,12 @@
 local   all             postgres                                peer
 
 # TYPE  DATABASE        USER            ADDRESS                 METHOD
-
+{% for host in salt['pillar.get']('database:hba', []) %}
+host    all             all             {{ host }}              md5
+{% endfor %}
 # "local" is for Unix domain socket connections only
 local   all             all                                     peer
 # IPv4 local connections:
-host    all             all             192.168.7.0/8           md5
 host    all             all             127.0.0.1/32            md5
 # IPv6 local connections:
 host    all             all             ::1/128                 md5

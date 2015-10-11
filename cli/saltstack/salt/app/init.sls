@@ -11,14 +11,17 @@ app:
     - mode: 0755
     - makedirs: true
     - require:
-      - user: web-user
+      - user: user.web
   git.latest:
     - name: {{ app['repo'] }}
-    - rev: {{ app['rev'] }}
+    - rev: {{ app['head'] }}
     - target: {{ app['root'] }}
-    - force_checkout: true
-    - force_reset: true
     - user: web
+    - force: true
+    - force_checkout: true
+    - force_clone: true
+    - force_fetch: true
+    - force_reset: true
     - require:
       - file: app
       - ssh_known_hosts: github.com

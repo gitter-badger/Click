@@ -1,18 +1,37 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
-  config.vm.hostname = "cli"
+  config.vm.hostname = "cli-dev"
   config.vm.network "private_network", ip: "192.168.7.2"
+  config.vm.network "forwarded_port", guest: 5432, guest_ip: "127.0.0.1", host: 15432, host_ip: "127.0.0.1"
+  config.vm.post_up_message = "\"Click!\" command line tool environment is ready."
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = false
+    vb.name = "click-dev"
+    vb.memory = 512
+    vb.cpus = 1
+  end
+  config.vm.provision "salt" do |salt|
+    salt.install_type = "stable"
+    salt.bootstrap_options = "-F -c /tmp/ -P"           # https://github.com/mitchellh/vagrant/issues/5973
+    salt.no_minion = false
+    salt.minion_config = "minion.yml"
+    salt.run_highstate = true
+    salt.colorize = true
+    salt.log_level = "warning"
+    salt.pillar({
+      "environment" => "dev",
+      "database" => {                                   # unfortunately, there is a replacement, not a merge
+        "name" => "click",
+        "user" => "click_rw",
+        "pass" => "click_rw_pass",
+        "hba" => ["192.168.7.0/8"],
+        "collate" => "C.UTF-8",
+        "ctype" => "C.UTF-8",
+      },
+    })
+  end
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.synced_folder "saltstack", "/srv"
-  config.vm.provision :salt do |salt|
-    salt.minion_config = "minion.ini"
-    salt.run_highstate = true
-    salt.log_level = "warning"
-  end
-  config.ssh.username = "vagrant"
-  config.ssh.password = "vagrant"
   config.ssh.forward_agent = true
   config.ssh.insert_key = true
 end

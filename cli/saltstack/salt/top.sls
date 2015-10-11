@@ -1,7 +1,8 @@
 base:
   '*':
-    - common
+    - os
+    - git
+    - ssh
     - php
     - postgres
-    - git
     - app
