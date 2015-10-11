@@ -1,6 +1,6 @@
 {
   "name": "octolab/click-cli",
-  "type": "application",
+  "type": "tool",
   "description": "\"Click!\" command line tool.",
   "homepage": "https://github.com/octolab/Click",
   "license": "MIT",
