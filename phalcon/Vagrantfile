@@ -20,6 +20,13 @@ Vagrant.configure(2) do |config|
     salt.log_level = "warning"
     salt.pillar({
       "environment" => "dev",
+      "database" => {                                   # unfortunately, there is a replacement, not a merge
+        "name" => "click",
+        "user" => "click_rw",
+        "pass" => "click_rw_pass",
+        "host" => "dbro",
+        "ip" => "192.168.7.2",
+      },
     })
   end
   config.vm.synced_folder ".", "/vagrant", disabled: true

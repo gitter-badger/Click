@@ -5,4 +5,4 @@ base:
     - ssh
     - php
     - nginx
-    #- app
+    - app

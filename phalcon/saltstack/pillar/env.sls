@@ -6,10 +6,11 @@ application:
   head: php-phalcon
 
 database:
-  host: dbro
   name: click
   user: click_ro
   pass: click_ro_pass
+  host: dbro
+  ip: 127.0.0.1
 
 php:
   timezone: UTC

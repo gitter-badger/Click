@@ -1,5 +1,9 @@
 {% set app = pillar['application'] %}
 
+include:
+  - app.nginx
+  - app.postgres
+
 app:
   file.directory:
     - name: {{ app['root'] }}
@@ -11,11 +15,14 @@ app:
       - user: web
   git.latest:
     - name: {{ app['repo'] }}
-    - rev: {{ app['rev'] }}
+    - rev: {{ app['head'] }}
     - target: {{ app['root'] }}
-    - force_checkout: true
-    - force_reset: true
     - user: web
+    - force: true
+    - force_checkout: true
+    - force_clone: true
+    - force_fetch: true
+    - force_reset: true
     - require:
       - file: app
       - ssh_known_hosts: github.com
