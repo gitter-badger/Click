@@ -1,7 +1,7 @@
 base:
   '*':
-    - common
-    - php
-    - nginx
-    - git
-    - app
+    - os
+    #- php
+    #- nginx
+    #- git
+    #- app
