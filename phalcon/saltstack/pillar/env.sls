@@ -10,7 +10,7 @@ database:
   user: click_ro
   pass: click_ro_pass
   host: dbro
-  ip: 127.0.0.1
+  ip: ~
 
 php:
   timezone: UTC
