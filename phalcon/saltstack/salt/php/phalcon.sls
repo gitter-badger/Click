@@ -1,12 +1,13 @@
 phalcon:
   pkgrepo.managed:
+    - humanname: Phalcon Apt Repository
     - ppa: phalcon/stable
-    - enabled: true
     - refresh_db: true
     - require_in:
       - pkg: phalcon
   pkg.installed:
-    - pkgs:
-      - php5-phalcon
+    - name: php5-phalcon
+    - refresh: true
+    - allow_updates: true
     - require:
       - pkg: php

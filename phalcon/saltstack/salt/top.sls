@@ -1,7 +1,8 @@
 base:
   '*':
     - os
-    #- php
+    - git
+    - ssh
+    - php
     #- nginx
-    #- git
     #- app
