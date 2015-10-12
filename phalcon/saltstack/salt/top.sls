@@ -4,5 +4,5 @@ base:
     - git
     - ssh
     - php
-    #- nginx
+    - nginx
     #- app
