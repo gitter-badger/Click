@@ -5,17 +5,6 @@ Vagrant.configure(2) do |config|
     vb.memory = 512
     vb.cpus = 1
   end
-  config.vm.provision "salt" do |salt|
-    salt.install_type = "stable"
-    salt.bootstrap_options = "-F -c /tmp/ -P"
-    salt.no_minion = false
-    salt.run_highstate = true
-    salt.colorize = true
-    salt.log_level = "warning"
-    salt.pillar({
-      "environment" => "dev",
-    })
-  end
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.ssh.forward_agent = true
 
@@ -28,8 +17,15 @@ Vagrant.configure(2) do |config|
       vb.name = "click-dev"
     end
     cli.vm.provision "salt" do |salt|
+      salt.install_type = "stable"
+      salt.bootstrap_options = "-F -c /tmp/ -P"
+      salt.no_minion = false
       salt.minion_config = "cli/minion.yml"
+      salt.run_highstate = true
+      salt.colorize = true
+      salt.log_level = "warning"
       salt.pillar({
+        "environment" => "dev",
         "database" => {
           "name" => "click",
           "user" => "click_rw",
@@ -52,8 +48,15 @@ Vagrant.configure(2) do |config|
       vb.name = "phalcon-dev"
     end
     web.vm.provision "salt" do |salt|
+      salt.install_type = "stable"
+      salt.bootstrap_options = "-F -c /tmp/ -P"
+      salt.no_minion = false
       salt.minion_config = "phalcon/minion.yml"
+      salt.run_highstate = true
+      salt.colorize = true
+      salt.log_level = "warning"
       salt.pillar({
+        "environment" => "dev",
         "database" => {
           "name" => "click",
           "user" => "click_rw",
