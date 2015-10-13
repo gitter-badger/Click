@@ -1,6 +1,6 @@
 monolog:
+  name: %app_name%
   handlers:
     file:
       type: stream
-      path: "%root_dir%/app/logs/cli.log"
-      level: %log_level%
+      arguments: ["%root_dir%/app/logs/cli.log", %log_level%, false]
