@@ -37,7 +37,7 @@ class Link
      *
      * @var string
      */
-    private $path;
+    private $urn;
     /**
      * @Assert\NotBlank()
      * @Assert\Type(type="string")
@@ -45,10 +45,11 @@ class Link
      *
      * @var string
      */
-    private $url;
+    private $uri;
     /**
      * @Assert\Type(type="string")
      * @Assert\Length(max="32")
+     * @Assert\Regex(pattern="/^\w+$/")
      *
      * @var string|null
      */
@@ -126,38 +127,38 @@ class Link
     /**
      * @return string
      */
-    public function getPath()
+    public function getUrn()
     {
-        return $this->path;
+        return $this->urn;
     }
 
     /**
-     * @param string $path
+     * @param string $urn
      *
      * @return $this
      */
-    public function setPath($path)
+    public function setUrn($urn)
     {
-        $this->path = $path;
+        $this->urn = $urn;
         return $this;
     }
 
     /**
      * @return string
      */
-    public function getUrl()
+    public function getUri()
     {
-        return $this->url;
+        return $this->uri;
     }
 
     /**
-     * @param string $url
+     * @param string $uri
      *
      * @return $this
      */
-    public function setUrl($url)
+    public function setUri($uri)
     {
-        $this->url = $url;
+        $this->uri = $uri;
         return $this;
     }
 
@@ -189,7 +190,7 @@ class Link
     }
 
     /**
-     * @param \DateTime|null $createdAt
+     * @param \DateTime $createdAt
      *
      * @return $this
      */
@@ -208,7 +209,7 @@ class Link
     }
 
     /**
-     * @param \DateTime|null $updatedAt
+     * @param \DateTime $updatedAt
      *
      * @return $this
      */

@@ -2,14 +2,13 @@
 
 namespace OctoLab\Click\Command;
 
-use OctoLab\Cilex\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * @author Kamil Samigullin <kamil@samigullin.info>
  */
-class AddCommand extends Command
+class AddCommand extends ClickCommand
 {
     /**
      * {@inheritdoc}
@@ -18,8 +17,8 @@ class AddCommand extends Command
      */
     protected function configure()
     {
-        $this
-            ->setName('add')
+        parent::configure()
+            ->setName('click:add')
             ->setDescription('Add link to database.')
         ;
     }

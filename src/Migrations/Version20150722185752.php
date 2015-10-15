@@ -27,14 +27,14 @@ class Version20150722185752 extends DriverBasedMigration
             id BIGSERIAL NOT NULL,
             user_id UUID NOT NULL,
             environment VARCHAR(32) NOT NULL,
-            path VARCHAR(128) NOT NULL,
-            url VARCHAR(255) NOT NULL,
+            urn VARCHAR(128) NOT NULL,
+            uri VARCHAR(255) NOT NULL,
             alias VARCHAR(32) NULL DEFAULT NULL,
             created_at TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
             updated_at TIMESTAMP(0) WITHOUT TIME ZONE NOT NULL,
             deleted_at TIMESTAMP(0) WITHOUT TIME ZONE NULL DEFAULT NULL,
             PRIMARY KEY (id),
-            CONSTRAINT link_path UNIQUE (user_id, environment, path),
+            CONSTRAINT link_urn UNIQUE (user_id, environment, urn),
             CONSTRAINT link_alias UNIQUE (user_id, alias)
         )';
         $this->queries[] = 'CREATE TRIGGER create_link BEFORE INSERT ON link

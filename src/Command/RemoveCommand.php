@@ -2,14 +2,13 @@
 
 namespace OctoLab\Click\Command;
 
-use OctoLab\Cilex\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * @author Kamil Samigullin <kamil@samigullin.info>
  */
-class RemoveCommand extends Command
+class RemoveCommand extends ClickCommand
 {
     /**
      * {@inheritdoc}
@@ -18,8 +17,8 @@ class RemoveCommand extends Command
      */
     protected function configure()
     {
-        $this
-            ->setName('remove')
+        parent::configure()
+            ->setName('click:remove')
             ->setDescription('Remove link from database.')
         ;
     }
