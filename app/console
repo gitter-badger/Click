@@ -9,6 +9,7 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\DBAL\Migrations\Tools\Console\Command as Migration;
 use OctoLab\Cilex\Provider as ServiceProvider;
 use OctoLab\Click\Command;
+use OctoLab\Click\Provider;
 
 define('ROOT_DIR', dirname(__DIR__));
 
@@ -23,6 +24,7 @@ $app->register(new ServiceProvider\ConfigServiceProvider(ROOT_DIR . '/app/config
 ]));
 $app->register(new ServiceProvider\DoctrineServiceProvider(true));
 $app->register(new ServiceProvider\MonologServiceProvider($debug));
+$app->register(new Provider\ServiceProvider());
 $app->command(new Migration\GenerateCommand());
 $app->command(new Migration\MigrateCommand());
 $app->command(new Migration\StatusCommand());

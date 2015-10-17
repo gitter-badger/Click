@@ -17,13 +17,6 @@ class Link
     private $id;
     /**
      * @Assert\NotBlank()
-     * @Assert\Uuid(strict=false)
-     *
-     * @var string
-     */
-    private $userId;
-    /**
-     * @Assert\NotBlank()
      * @Assert\Type(type="string")
      * @Assert\Length(max="32")
      *
@@ -83,25 +76,6 @@ class Link
     public function setId($id)
     {
         $this->id = $id;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getUserId()
-    {
-        return $this->userId;
-    }
-
-    /**
-     * @param string $userId
-     *
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        $this->userId = $userId;
         return $this;
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace OctoLab\Click\Service;
+namespace OctoLab\Click\Provider;
 
 use Cilex\Application;
 use Cilex\ServiceProviderInterface;
@@ -22,8 +22,7 @@ class ServiceProvider implements ServiceProviderInterface
         $app->offsetSet('validator', $app->share(function () {
             return Validation::createValidatorBuilder()
                 ->enableAnnotationMapping()
-                ->getValidator()
-            ;
+                ->getValidator();
         }));
         $app->offsetSet('repository', $app->share(function () use ($app) {
             return new LinkRepository(

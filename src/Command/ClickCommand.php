@@ -6,6 +6,7 @@ use Cilex\Command\Command;
 use OctoLab\Click\Repository\LinkRepository;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Console\Input\InputOption;
+use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * @author Kamil Samigullin <kamil@samigullin.info>
@@ -45,8 +46,32 @@ class ClickCommand extends Command
     protected function configure()
     {
         return $this
-            ->addOption('user', 'u', InputOption::VALUE_REQUIRED, 'User.')
-            ->addOption('env', 'e', InputOption::VALUE_OPTIONAL, 'Environment.', 'default')
-        ;
+            ->addOption('env', 'e', InputOption::VALUE_REQUIRED, 'Environment.', 'default');
+    }
+
+    /**
+     * @param OutputInterface $output
+     *
+     * @return int
+     *
+     * @throws \InvalidArgumentException
+     */
+    protected function success(OutputInterface $output)
+    {
+        $output->writeln('<info>Success</info>');
+        return 0;
+    }
+
+    /**
+     * @param OutputInterface $output
+     *
+     * @return int
+     *
+     * @throws \InvalidArgumentException
+     */
+    protected function failure(OutputInterface $output)
+    {
+        $output->writeln('<error>Failure</error>');
+        return 1;
     }
 }
