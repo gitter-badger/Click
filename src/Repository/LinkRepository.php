@@ -163,7 +163,10 @@ class LinkRepository
                 ->update('link')
                 ->set('uri', ':uri')
                 ->where('id = :id')
-                ->setParameter(':id', $link->getId());
+                ->setParameters([
+                    ':uri' => $link->getUri(),
+                    ':id' => $link->getId(),
+                ]);
             if (!$preserveAlias || $link->getAlias() !== null) {
                 $qb->set('alias', ':alias')->setParameter(':alias', $link->getAlias());
             }
