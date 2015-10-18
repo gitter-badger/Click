@@ -22,7 +22,7 @@ class SetCommand extends ClickCommand
     {
         parent::configure()
             ->setName('click:set')
-            ->setDescription('Update or add link to database.')
+            ->setDescription('Create or update link in database.')
             ->addOption('urn', null, InputOption::VALUE_REQUIRED, 'Uniform Resource Name of source.')
             ->addOption('uri', null, InputOption::VALUE_REQUIRED, 'Uniform Resource Identifier of target.')
             ->addOption('alias', 'a', InputOption::VALUE_OPTIONAL, 'Link alias (set null if you want to unset it).');
