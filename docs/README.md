@@ -77,6 +77,7 @@ Options:
 
 To import data run `./demo.sh`. After importing you can view available links by command `app/console click:get -e demo`:
 
+```
 +----+---------+----------------------------------+-------+---------------------+---------------------+---------------------+
 | ID | URN     | URI                              | Alias | Created at          | Updated at          | Deleted at          |
 +----+---------+----------------------------------+-------+---------------------+---------------------+---------------------+
@@ -84,3 +85,4 @@ To import data run `./demo.sh`. After importing you can view available links by 
 | 2  | /google | https://www.google.com/          |       | xxxx-xx-xx xx:xx:xx | xxxx-xx-xx xx:xx:xx | xxxx-xx-xx xx:xx:xx |
 | 3  | /yandex | http://www.yandex.ru/            |       | xxxx-xx-xx xx:xx:xx | xxxx-xx-xx xx:xx:xx |                     |
 +----+---------+----------------------------------+-------+---------------------+---------------------+---------------------+
+```
