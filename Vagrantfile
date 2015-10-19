@@ -26,6 +26,7 @@ Vagrant.configure(2) do |config|
       salt.log_level = "warning"
       salt.pillar({
         "environment" => "dev",
+        "install_demo" => true,
         "database" => {
           "name" => "click",
           "user" => "click_rw",

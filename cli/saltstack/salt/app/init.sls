@@ -25,3 +25,29 @@ app:
     - require:
       - file: app
       - ssh_known_hosts: github.com
+  composer.installed:
+    - name: {{ app['root'] }}
+    - user: web
+    - prefer_dist: true
+    - optimize: {{ pillar['environment'] != 'dev' }}
+    - no_dev: {{ pillar['environment'] != 'dev' }}
+    - quiet: true
+    - require:
+      - git: app
+  cmd.run:
+    - name: app/console migrations:migrate --no-interaction
+    - cwd: {{ app['root'] }}
+    - user: web
+    - require:
+      - composer: app
+      - service: postgres.service
+
+{% if pillar['install_demo'] %}
+app.demo:
+  cmd.run:
+    - name: ./demo.sh
+    - cwd: {{ app['root'] }}
+    - user: web
+    - require:
+      - cmd: app
+{% endif %}
