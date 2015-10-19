@@ -1,0 +1,18 @@
+{
+  "name": "octolab/click-phalcon",
+  "type": "application",
+  "description": "\"Click!\" application based on Phalcon framework.",
+  "homepage": "https://github.com/octolab/Click",
+  "license": "MIT",
+  "authors": [
+    { "name": "Kamil Samigullin", "email": "kamil@samigullin.info" }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "ext-phalcon": "~2.0",
+    "monolog/monolog": "~1.0"
+  },
+  "autoload": {
+    "psr-4": { "OctoLab\\Click\\": "src/" }
+  }
+}
