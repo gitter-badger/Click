@@ -1,30 +1,56 @@
-# Requirements
+# Environments
+
+## Requirements
+
+* [VirtualBox](https://www.virtualbox.org)
+* [Vagrant](https://www.vagrantup.com)
 
 Vagrant plugins:
 
 * `vagrant-vbguest` for sync VirtualBox Guest Additions
 
-Use `vagrant plugin install <plugin>`.
-
-# Presented environments
+Installation instruction available [here](https://docs.vagrantup.com/v2/plugins/usage.html).
 
 ## Multi-machine
 
-Run `vagrant up "/cli|phalcon/"` (or other combination with `cli`) for up application cluster.
+Run `vagrant up cli <environment>` for up application cluster.
 
-Available environment:
+| Environment   | Status    | Description         |
+| ------------- | --------- | ------------------- |
+| cli (primary) | available | Command line tool   |
+| phalcon       | available | Phalcon application |
+| silex         | not ready | Silex application   |
+| slim          | not ready | Slim application    |
 
-* cli (primary)
-* phalcon
+Documentation about Vagrant command-line interface available [here](https://docs.vagrantup.com/v2/cli/index.html).
 
 ## Command line tool
 
-Xdebug via `ssh -R 9191:127.0.0.1:9000 vagrant@192.168.7.2`
+### What's inside
 
-## Phalcon application
+* Ubuntu 14.04 x64 Trusty
+* Git 1.9+
+* PHP 5.5+ with Composer and Xdebug (on dev mode)
+* PostgreSQL 9.4+
 
-Xdebug via `ssh -R 9191:127.0.0.1:9001 vagrant@192.168.7.3`
+All Salt Formulas are located [here](/cli/saltstack/salt), pillar file is [here](/cli/saltstack/pillar/env.sls).
 
-## Silex application
+### Debugging
 
-## Slim application
+Default configuration:
+
+```
+xdebug.remote_enable = 1
+xdebug.remote_autostart = 1
+xdebug.remote_host = 127.0.0.1
+xdebug.remote_port = 9191
+xdebug.profiler_enable = 0
+xdebug.idekey = CLICK
+xdebug.max_nesting_level = 100
+```
+
+Use `ssh -R 9191:127.0.0.1:9000 vagrant@192.168.7.2` to forward :9191 of guest machine to 127.0.0.1:9000 of your host.
+
+### Database
+
+PhpStorm configuration: `jdbc:postgresql://192.168.7.2:5432/click`, user: click_rw, password: click_rw_pass
