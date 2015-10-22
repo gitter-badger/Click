@@ -26,7 +26,7 @@ management through the console.
 | PHP        | [Silex](https://github.com/silexphp/Silex)                    | [php-silex](../../tree/php-silex)       | not ready   | [api](../../tree/php-silex/docs)    |
 | PHP        | [Slim](https://github.com/slimphp/Slim)                       | [php-slim](../../tree/php-slim)         | not ready   | [api](../../tree/php-slim/docs)     |
 | PHP        | [React](https://github.com/reactphp/react)                    | not presented                           | not ready   | not ready                           |
-| Python     | [Flask](https://github.com/mitsuhiko/flask)                   | [python-flask](../../tree/python-flask) | not ready   | [api](../../tree/python-flask/docs) |
+| Python     | [Flask](https://github.com/mitsuhiko/flask)                   | __python-flask__                        | not ready   | [api](docs)                         |
 | JavaScript | [Express](https://github.com/strongloop/express)              | not presented                           | not ready   | not ready                           |
 | Go         | [Martini](https://github.com/go-martini/martini)              | [go-martini](../../tree/go-martini)     | not ready   | [api](../../tree/go-martini/docs)   |
 | C          | [Kore](https://github.com/jorisvink/kore)                     | not presented                           | not ready   | not ready                           |
