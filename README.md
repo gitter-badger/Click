@@ -28,7 +28,7 @@ management through the console.
 | PHP        | [React](https://github.com/reactphp/react)                    | not presented                           | not ready   | not ready                           |
 | Python     | [Flask](https://github.com/mitsuhiko/flask)                   | [python-flask](../../tree/python-flask) | not ready   | [api](../../tree/python-flask/docs) |
 | JavaScript | [Express](https://github.com/strongloop/express)              | not presented                           | not ready   | not ready                           |
-| Go         | [Martini](https://github.com/go-martini/martini)              | [go-martini](../../tree/go-martini)     | not ready   | [api](../../tree/go-martini/docs)   |
+| Go         | [Martini](https://github.com/go-martini/martini)              | __go-martini__                          | not ready   | [api](docs)                         |
 | C          | [Kore](https://github.com/jorisvink/kore)                     | not presented                           | not ready   | not ready                           |
 | C          | [ESP](https://github.com/embedthis/esp)                       | not presented                           | not ready   | not ready                           |
 | Java       | [Sprint Boot](https://github.com/spring-projects/spring-boot) | not presented                           | not ready   | not ready                           |
