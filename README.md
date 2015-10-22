@@ -23,7 +23,7 @@ management through the console.
 | Language   | Framework                                                     | Branch                                  | Status      | Documentation                       |
 | ---------- | ------------------------------------------------------------- | --------------------------------------- | ----------- | ----------------------------------- |
 | PHP        | [Phalcon](https://github.com/phalcon/cphalcon)                | [php-phalcon](../../tree/php-phalcon)   | in progress | [api](../../tree/php-phalcon/docs)  |
-| PHP        | [Silex](https://github.com/silexphp/Silex)                    | [php-silex](../../tree/php-silex)       | not ready   | [api](../../tree/php-silex/docs)    |
+| PHP        | [Silex](https://github.com/silexphp/Silex)                    | __php-silex__                           | not ready   | [api](docs)                         |
 | PHP        | [Slim](https://github.com/slimphp/Slim)                       | [php-slim](../../tree/php-slim)         | not ready   | [api](../../tree/php-slim/docs)     |
 | PHP        | [React](https://github.com/reactphp/react)                    | not presented                           | not ready   | not ready                           |
 | Python     | [Flask](https://github.com/mitsuhiko/flask)                   | [python-flask](../../tree/python-flask) | not ready   | [api](../../tree/python-flask/docs) |
