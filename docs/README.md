@@ -33,7 +33,7 @@ Documentation about Vagrant command-line interface available [here](https://docs
 * PHP 5.5+ with Composer and Xdebug (on dev mode)
 * PostgreSQL 9.4+
 * [Application](../../../tree/cli/docs), default located in `/opt/cli/click`
-(see `[pillar](/cli/saltstack/pillar/env.sls)['application']['root']`).
+(see [pillar](/cli/saltstack/pillar/env.sls)).
 
 All Salt Formulas are located [here](/cli/saltstack/salt).
 
