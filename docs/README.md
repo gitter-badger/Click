@@ -32,6 +32,7 @@ Documentation about Vagrant command-line interface available [here](https://docs
 * Git 1.9+
 * PHP 5.5+ with Composer and Xdebug (on dev mode)
 * PostgreSQL 9.4+
+* [Application](../../../tree/cli/docs)
 
 All Salt Formulas are located [here](/cli/saltstack/salt), pillar file is [here](/cli/saltstack/pillar/env.sls).
 
