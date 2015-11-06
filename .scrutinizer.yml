@@ -13,4 +13,5 @@ checks:
 
 filter:
   excluded_paths:
+    - src/Migrations/*
     - src/Tests/*
