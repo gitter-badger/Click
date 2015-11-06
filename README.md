@@ -3,6 +3,7 @@
 > Simplest personal referrals tracker on different languages and frameworks.
 
 [![Build status](https://scrutinizer-ci.com/g/octolab/Click/badges/build.png?b=cli)](https://scrutinizer-ci.com/g/octolab/Click/build-status/cli)
+[![Code coverage](https://scrutinizer-ci.com/g/octolab/Click/badges/coverage.png?b=cli)](https://scrutinizer-ci.com/g/octolab/Click/?branch=cli)
 [![Scrutinizer code quality](https://scrutinizer-ci.com/g/octolab/Click/badges/quality-score.png?b=cli)](https://scrutinizer-ci.com/g/octolab/Click/?branch=cli)
 
 ## Road map
