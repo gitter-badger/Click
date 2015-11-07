@@ -2,6 +2,10 @@
 >
 > Simplest personal referrals tracker on different languages and frameworks.
 
+[![Build status](https://scrutinizer-ci.com/g/octolab/Click/badges/build.png?b=php-phalcon)](https://scrutinizer-ci.com/g/octolab/Click/build-status/php-phalcon)
+[![Code coverage](https://scrutinizer-ci.com/g/octolab/Click/badges/coverage.png?b=php-phalcon)](https://scrutinizer-ci.com/g/octolab/Click/?branch=php-phalcon)
+[![Scrutinizer code quality](https://scrutinizer-ci.com/g/octolab/Click/badges/quality-score.png?b=php-phalcon)](https://scrutinizer-ci.com/g/octolab/Click/?branch=php-phalcon)
+
 ## Road map
 
 ### [Environment](../../tree/environment)
