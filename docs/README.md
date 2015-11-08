@@ -41,12 +41,14 @@ All Salt Formulas are located [here](/cli/saltstack/salt).
 
 Default configuration:
 
-```
+```ini
 xdebug.remote_enable = 1
 xdebug.remote_autostart = 1
 xdebug.remote_host = 127.0.0.1
 xdebug.remote_port = 9191
-xdebug.profiler_enable = 0
+xdebug.profiler_enable = 1
+xdebug.profiler_output_dir = "/tmp"
+xdebug.profiler_output_name = "cachegrind.out.%p"
 xdebug.idekey = CLICK
 xdebug.max_nesting_level = 100
 ```
@@ -56,3 +58,33 @@ Use `ssh -R 9191:127.0.0.1:9000 vagrant@192.168.7.2` to forward :9191 of guest m
 ### Database
 
 PhpStorm configuration: `jdbc:postgresql://192.168.7.2:5432/click`, user: click_rw, password: click_rw_pass
+
+## Phalcon application
+
+### What's inside
+
+* Ubuntu 14.04 x64 Trusty
+* Git 1.9+
+* PHP 5.5+ with Composer, Phalcon and Xdebug (on dev mode)
+* [Application](../../../tree/php-phalcon/docs), default located in `/opt/web/click.phalcon`
+(see [pillar](/phalcon/saltstack/pillar/env.sls)).
+
+All Salt Formulas are located [here](/phalcon/saltstack/salt).
+
+### Debugging
+
+Default configuration:
+
+```ini
+xdebug.remote_enable = 1
+xdebug.remote_autostart = 1
+xdebug.remote_host = 127.0.0.1
+xdebug.remote_port = 9191
+xdebug.profiler_enable = 1
+xdebug.profiler_output_dir = "/tmp"
+xdebug.profiler_output_name = "cachegrind.out.%p"
+xdebug.idekey = CLICK
+xdebug.max_nesting_level = 100
+```
+
+Use `ssh -R 9191:127.0.0.1:9000 vagrant@192.168.7.3` to forward :9191 of guest machine to 127.0.0.1:9000 of your host.
