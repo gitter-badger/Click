@@ -11,7 +11,7 @@ php:
       - php5-cli
       - php5-common
       - php5-pgsql
-      {% if pillar['environment'] == 'dev' %}
+      {% if pillar['environment'] != 'prod' %}
       - php5-xdebug
       {% endif %}
     - allow_updates: true
@@ -28,7 +28,7 @@ php.config.cli:
 
 {% for mod in salt['cp.list_master'](prefix='php/config/mods/') %}
 {% set item = mod.split('/').pop().replace('.tpl', '') %}
-{% if pillar['environment'] != 'dev' and item == 'xdebug.ini' %}
+{% if pillar['environment'] == 'prod' and item == 'xdebug.ini' %}
 # skip
 {% else %}
 php.config.mods.{{ item }}:

@@ -3,6 +3,10 @@ nginx:
     - refresh: true
     - allow_updates: true
 
+apache:
+  pkg.purged:
+    - name: apache2
+
 nginx.service:
   cmd.wait:
     - name: service nginx restart

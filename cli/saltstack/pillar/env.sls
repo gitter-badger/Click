@@ -1,5 +1,4 @@
 environment: prod
-install_demo: false
 
 application:
   root: /opt/cli/click

@@ -29,8 +29,8 @@ app:
     - name: {{ app['root'] }}
     - user: web
     - prefer_dist: true
-    - optimize: {{ pillar['environment'] != 'dev' }}
-    - no_dev: {{ pillar['environment'] != 'dev' }}
+    - optimize: {{ pillar['environment'] == 'prod' }}
+    - no_dev: {{ pillar['environment'] == 'prod' }}
     - quiet: true
     - require:
       - git: app
@@ -42,7 +42,7 @@ app:
       - composer: app
       - service: postgres.service
 
-{% if pillar['install_demo'] %}
+{% if pillar['environment'] == 'demo' %}
 app.demo:
   cmd.run:
     - name: ./demo.sh

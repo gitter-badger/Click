@@ -12,7 +12,7 @@ app:
     - mode: 0755
     - makedirs: true
     - require:
-      - user: web
+      - user: user.web
   git.latest:
     - name: {{ app['repo'] }}
     - rev: {{ app['head'] }}
@@ -26,3 +26,12 @@ app:
     - require:
       - file: app
       - ssh_known_hosts: github.com
+  composer.installed:
+    - name: {{ app['root'] }}
+    - user: web
+    - prefer_dist: true
+    - optimize: {{ pillar['environment'] == 'prod' }}
+    - no_dev: {{ pillar['environment'] == 'prod' }}
+    - quiet: true
+    - require:
+      - git: app

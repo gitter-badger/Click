@@ -49,7 +49,7 @@ PermitEmptyPasswords no
 ChallengeResponseAuthentication no
 
 # Change to no to disable tunnelled clear text passwords
-PasswordAuthentication {{ 'yes' if pillar['environment'] == 'dev' else 'no' }}
+PasswordAuthentication {{ 'no' if pillar['environment'] == 'prod' else 'yes' }}
 
 # Kerberos options
 #KerberosAuthentication no

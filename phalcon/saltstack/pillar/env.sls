@@ -4,6 +4,7 @@ application:
   root: /opt/web/click.phalcon
   repo: https://github.com/octolab/Click.git
   head: php-phalcon
+  host: phalcon.click.dev default
 
 database:
   name: click

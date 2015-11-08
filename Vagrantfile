@@ -23,8 +23,7 @@ Vagrant.configure(2) do |config|
       salt.colorize = true
       salt.log_level = "warning"
       salt.pillar({
-        "environment" => "dev",
-        "install_demo" => true,
+        "environment" => "demo",
         "database" => {
           "groups" => {
             "rw" => ["SELECT","INSERT","UPDATE","DELETE"],
@@ -54,7 +53,7 @@ Vagrant.configure(2) do |config|
   config.vm.define "phalcon", autostart: false do |web|
     web.vm.hostname = "phalcon-dev"
     web.vm.network "private_network", ip: "192.168.7.3"
-    web.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+    web.vm.network "forwarded_port", guest: 8080, host: 8080, host_ip: "127.0.0.1"
     web.vm.post_up_message = "\"Click!\" phalcon environment is ready."
     web.vm.provider "virtualbox" do |vb|
       vb.gui = false
@@ -71,11 +70,11 @@ Vagrant.configure(2) do |config|
       salt.colorize = true
       salt.log_level = "warning"
       salt.pillar({
-        "environment" => "dev",
+        "environment" => "demo",
         "database" => {
           "name" => "click",
-          "user" => "click_rw",
-          "pass" => "click_rw_pass",
+          "user" => "click_ro",
+          "pass" => "click_ro_pass",
           "host" => "dbro",
           "ip" => "192.168.7.2",
         },
