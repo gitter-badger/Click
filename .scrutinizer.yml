@@ -1,9 +1,15 @@
 build:
   dependencies:
     before:
-      - sudo apt-add-repository ppa:phalcon/stable && sudo apt-get update && sudo apt-get install php5-phalcon
+      - sudo apt-get install php5-dev php5-mysql gcc libpcre3-dev
+      - git clone --depth=1 git://github.com/phalcon/cphalcon.git -b master
+      - cd cphalcon/ext; export CFLAGS="-g3 -O1 -fno-delete-null-pointer-checks -Wall"; phpize && ./configure --enable-phalcon && make -j4 && sudo make install && sed -i '$ a \\n[Phalcon]\nextension=phalcon.so\n'  /home/scrutinizer/.phpenv/versions/5.5.25/etc/php.ini
+      - php -m | grep -i Phalcon
   environment:
-    php: 5.5.25
+    php:
+      version: 5.5.25
+      ini:
+        date.timezone: UTC
 #  tests:
 #    override:
 #      - command: phpunit --coverage-clover=code-coverage
