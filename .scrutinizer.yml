@@ -1,4 +1,7 @@
 build:
+  dependencies:
+    before:
+      - sudo apt-add-repository ppa:phalcon/stable && sudo apt-get update && sudo apt-get install php5-phalcon
   environment:
     php: 5.5.25
 #  tests:
