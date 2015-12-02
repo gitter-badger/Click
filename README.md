@@ -4,6 +4,8 @@
 
 ## Road map
 
+[![Join the chat at https://gitter.im/octolab/Click](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/octolab/Click?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ### [Environment](../../tree/environment)
 
 Based on [Ubuntu](http://www.ubuntu.com/) 14.04 LTS built by [Vagrant](https://www.vagrantup.com/)
